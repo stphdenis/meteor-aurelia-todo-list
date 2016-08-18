@@ -1,2 +1,3 @@
 node_modules
+/todo/client/api
 /todo/server/api
