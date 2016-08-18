@@ -1,0 +1,36 @@
+{
+  "name": "meteor-aurelia-todos-list",
+  "version": "0.1.0-beta.1.0.0",
+  "description": "A todos list with Meteor and Aurelia (use symlink for modules).",
+  "scripts": {
+    "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
+    "start-client": "cross-env ./scripts/client-start",
+    "start-server": "cross-env ./scripts/server-start",
+    "postinstall": "modules-client-server --sync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/stphdenis/meteor-aurelia-todos-list.git"
+  },
+  "keywords": [
+    "meteor",
+    "aurelia",
+    "webpack"
+  ],
+  "license": "MIT",
+  "author": "Stéphane Denis <stph.denis@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/stphdenis/meteor-aurelia-todos-list/issues"
+  },
+  "homepage": "https://github.com/stphdenis/meteor-aurelia-todos-list#readme",
+  "aurelia": {
+    "build": {
+      "resources": []
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^2.2.0",
+    "cross-env": "^2.0.0"
+  }
+}

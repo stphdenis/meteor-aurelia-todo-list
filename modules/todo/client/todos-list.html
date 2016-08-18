@@ -1,0 +1,29 @@
+<template>
+    <!--require from="login-buttons"></require-->
+
+    <header>
+        <h1>Todo List ( ${incompleteCount} )</h1>
+
+        <label class="hide-completed">
+            <input type="checkbox" checked.bind="hideCompleted"" />
+            Hide Completed Tasks
+        </label>
+
+        <!--login-buttons></login-buttons-->
+        <p>Status de connexion : ${meteor.status}</p>
+
+         <form class="new-task" submit.delegate="addTask()">
+            <input type="text" value.bind="newTask" placeholder="Type to add new tasks" />
+        </form>
+
+    </header>
+    <ul>
+        <li repeat.for="task of tasks" class="${task.checked ? 'checked' : ''}">
+            <button class="delete" click.trigger="removeTask(task)">&times;</button>
+            <input type="checkbox" checked.bind="task.checked" change.delegate="setChecked(task)" class="toggle-checked" />
+            <span class="text">
+                ${task.text}
+            </span>
+        </li>
+    </ul>
+</template>
