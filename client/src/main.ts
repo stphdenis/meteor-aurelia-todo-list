@@ -12,7 +12,8 @@ Bluebird.config({ warnings: false });
 export async function configure(aurelia: Aurelia) {
   aurelia.use
     .standardConfiguration()
-    .developmentLogging();
+    .developmentLogging()
+    .plugin('aurelia-meteor');
 
   // Uncomment the line below to enable animation.
   // aurelia.use.plugin('aurelia-animator-css');

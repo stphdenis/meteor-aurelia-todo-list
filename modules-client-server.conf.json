@@ -1,1 +1,14 @@
-{ "serverSrcPath": "./server/imports" } 
+{
+  "serverSrcPath": "./server/imports",
+  "clientSymlinkList": [
+    "src/todo"
+  ],
+  "serverSymlinkList": [
+    "server/imports/todo"
+  ],
+  "modulesSymlinkList": [
+    "node_modules",
+    "todo/client/api",
+    "todo/server/api"
+  ]
+}

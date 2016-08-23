@@ -1,5 +1,5 @@
 <template>
-    <!--require from="login-buttons"></require-->
+    <!--require from="aurelia-meteor/login-buttons"></require-->
 
     <header>
         <h1>Todo List ( ${incompleteCount} )</h1>
@@ -9,8 +9,8 @@
             Hide Completed Tasks
         </label>
 
-        <!--login-buttons></login-buttons-->
-        <p>Status de connexion : ${meteor.status}</p>
+        <login-buttons></login-buttons>
+        <p>Status de connexion : ${meteor.statusString}</p>
 
          <form class="new-task" submit.delegate="addTask()">
             <input type="text" value.bind="newTask" placeholder="Type to add new tasks" />
